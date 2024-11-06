@@ -48,7 +48,7 @@ As you can see, in the first image where we are still editing the scene, you can
 
 ![image](https://github.com/user-attachments/assets/f7b48d8b-185a-4ee9-9110-91a3964db27f)
 
-2) Click on the script so it will take you to visual studio. We want this script script to make it so that when we click our left mouse button on the gameobject, it will make the TextMeshPro become active again, turning it visible on our game screen. 
+2) Click on the script so it will take you to visual studio. We want this script to make it so that when we click our left mouse button on the gameobject, it will make the TextMeshPro become active again, turning it visible on our game screen. 
 ```c#
 public class Square : MonoBehaviour
  {   
@@ -60,4 +60,14 @@ public class Square : MonoBehaviour
        }
  }
 ```
-We can delete start and void bec
+We can delete start and void because we don't want anything to happen when the game starts, and we have nothing we have to check for constantly with update. 
+
+We use `MonoBehaviour` so that the script can attach itself to gameobjects in the editor, and so that our new class 'Square' has access to all the functions that monobehaviour has, such as the start and update methods (though we do not need to use either of these in this specific example). 
+
+We use `public GameObject target` so that inside the unity editor, where the script is attached to the gameobject we have a little box where we can put the 'target' of the code. In this case I dragged and dropped the text from the `Canvas` group. This is possible due to making it a `public` class - this essentially means we can manipulate this class through Unity manually in the inspector. If it were a `private` class, we would only be able to attach these scripts to each other by referencing them in the scripts themselves, which is time consuming and not very efficient for the function.
+
+## The Script in Action
+If you have followed these steps correctly, your script should perform like so;
+
+https://github.com/user-attachments/assets/5803e141-ce39-487a-ac0f-90e436e34869
+
