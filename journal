@@ -42,3 +42,9 @@ We use public gameobject target so that inside the unity editor, where the scrip
 Now in the code we write down the input, so that the text will become 'active' (visible in-game) when we click with our mouse button.
 
 In the final game obviously this code won't be perfect, as I will need to also make the text go away and I will have to make the system more efficient to support having numerous lines of dialogue. It could be something to explore to make the tutorial better, but I am quite behind as is so I might just make the tutorial simple.
+
+# 2024-11-06
+
+Writing my first tutorial today, referencing all the things I wrote in here yesterday to remind myself how to do it. Couldn't figure out how to add another md file to this repository without making a new one, so I cheated and downloaded one of Paul's files, reuploaded it and just replaced all of his text with my own. I will be quite embarassed if there is an easier way.
+
+Turns out there was an easier way. When adding a new file to a repository, I just have to put '.md' at the end of the name. 
