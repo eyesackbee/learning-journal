@@ -1,2 +1,8 @@
-# 3D Object Scrollable List
-## This tutorial shows how to make a scrollable list that contains both 2D and 3D objects. The scrollable list will store various weapons that players will be able to tap to shoot them. Each gun will give different amount of points. Along with guns, each list element will display a gun's name, it's damage (points that it gives per shot) and a target object that will be shot at.
+# Text Appearing after Clicking Gameobject
+## This tutorial shows how to make text appear on the screen after clicking on a gameobject with the mouse. This can be useful for things such as prompting dialogue from characters after clicking on their sprite in-game.
+### Prerequisites
+- Image of your sprite
+  - All you need for this tutorial is the image of whatever sprite you will need to click on for the text to appear. This can be anything from a picture of a simple box, to a fully rendered character sprite. For this tutorial we will be using a simple solid coloured square made in MS Paint.
+
+## The Steps
+1) 
