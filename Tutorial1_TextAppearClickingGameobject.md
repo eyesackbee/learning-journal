@@ -43,8 +43,21 @@ As you can see, in the first image where we are still editing the scene, you can
 
 
 ## Creating the Scripts
-1) Back in the project window, right-click and navigate to `Create > C# Script`. This script will make it so that when we click our left mouse button on the gameobject, it will make the TextMeshPro become active again, turning it visible on our game screen.
+1) Back in the project window, right-click and navigate to `Create > C# Script`. I will be calling this script 'Square'.
+
 
 ![image](https://github.com/user-attachments/assets/f7b48d8b-185a-4ee9-9110-91a3964db27f)
 
-2) `
+2) Click on the script so it will take you to visual studio. We want this script script to make it so that when we click our left mouse button on the gameobject, it will make the TextMeshPro become active again, turning it visible on our game screen. 
+```c#
+public class Square : MonoBehaviour
+ {   
+      public GameObject target;
+
+      void OnMouseDown()
+       {
+        target.SetActive(true);
+       }
+ }
+```
+We can delete start and void bec
