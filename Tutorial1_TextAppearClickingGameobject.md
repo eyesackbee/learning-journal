@@ -1,0 +1,2 @@
+# 3D Object Scrollable List
+## This tutorial shows how to make a scrollable list that contains both 2D and 3D objects. The scrollable list will store various weapons that players will be able to tap to shoot them. Each gun will give different amount of points. Along with guns, each list element will display a gun's name, it's damage (points that it gives per shot) and a target object that will be shot at.
