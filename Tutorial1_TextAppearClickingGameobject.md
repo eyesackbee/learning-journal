@@ -5,7 +5,7 @@
   - All you need for this tutorial is the image of whatever sprite you will need to click on for the text to appear. This can be anything from a picture of a simple box, to a fully rendered character sprite. For this tutorial we will be using a simple solid coloured square made in MS Paint.
 
 ## Creating the Gameobject
-1) Import your sprite image into Unity by going into the project window and navigating to the Assets folder. Right click inside this folder and select 'Import New Asset'.
+1) Import your sprite image into Unity by going into the `project window` and navigating to the `Assets folder`. Right click inside this folder and select `Import New Asset`.
 
 ![image](https://github.com/user-attachments/assets/a07769f9-24c5-4af5-b48e-d43326fb1664)
 
@@ -13,14 +13,14 @@
 
 ![image](https://github.com/user-attachments/assets/b3ce2c85-8bc0-479b-9fa1-7ac2f75fb8d0)
 
-3) Clicking on the sprite gameobject in the hierarchy, go to the inspector and navigate to the 'add component' button. Add a 'Box Collider 2D' to the gameobject.
+3) Clicking on the sprite gameobject in the hierarchy, go to the inspector and navigate to the `add component` button. Add a `Box Collider 2D` to the gameobject.
    - We want to do this as we need the game to know when we are clicking on the gameobject specifically vs anywhere in general on the screen. We only want the text to appear when we click on the gameobject, not anywhere else, so this collider is necessary.
    - We don't need to edit the parameters on this component as it is already tailored to the dimensions of the sprite. Again, as we only want the text to appear if we click directly on the gameobject, there is no need to edit it at this point.
 
 ![image](https://github.com/user-attachments/assets/2f3bad62-9bad-41aa-8f42-d50217739e14)
 
 ## Creating the Text
-1) Back in the hierarchy, right click and navigate to UI > Text - TextMeshPro. Clicking on it will add a new item in the hierarchy - a 'Canvas' folder, and within the folder is our text file.
+1) Back in the hierarchy, right click and navigate to `UI > Text - TextMeshPro`. Clicking on it will add a new item in the hierarchy - a `Canvas` folder, and within the folder is our text file.
    - You may be prompted to install some additional components to make TextMeshPro work. Don't panic, just install what is needed and continue on with the tutorial.
 
 ![image](https://github.com/user-attachments/assets/e223860f-b256-4530-8125-4ecc94991203)
@@ -29,7 +29,7 @@
 
 ![image](https://github.com/user-attachments/assets/1214a13a-4bb0-4629-8dc9-557db4561fb7)
 
-3) You may notice that when you created the TextMeshPro in the hierarchy, it created a brand-new, giant screen in the scene editor. When it is zoomed out fully, this new box is actually another representation of the game screen when it is being played, but specifically for allowing you to see where exactly the gameobjects in the 'Canvas' folder (essentially, your UI!) will be in the final game. Try moving your text placement around the screen and putting it in different places once the tutorial is finished to get a proper understanding of this!
+3) You may notice that when you created the TextMeshPro in the hierarchy, it created a brand-new, giant screen in the scene editor. When it is zoomed out fully, this new box is actually another representation of the game screen when it is being played, but specifically for allowing you to see where exactly the gameobjects in the `Canvas` folder (essentially, your UI!) will be in the final game. Try moving your text placement around the screen and putting it in different places once the tutorial is finished to get a proper understanding of this!
 
 ![image](https://github.com/user-attachments/assets/3fed549c-e93a-4737-b88e-642a1d6cc8a3)
 
@@ -43,9 +43,8 @@ As you can see, in the first image where we are still editing the scene, you can
 
 
 ## Creating the Scripts
-1) Back in the project window, right-click and navigate to Create > C# Script. This script will make it so that when we click our left mouse button on the gameobject, it will make the TextMeshPro become active again, turning it visible on our game screen.
+1) Back in the project window, right-click and navigate to `Create > C# Script`. This script will make it so that when we click our left mouse button on the gameobject, it will make the TextMeshPro become active again, turning it visible on our game screen.
 
 ![image](https://github.com/user-attachments/assets/f7b48d8b-185a-4ee9-9110-91a3964db27f)
 
-
-2) 
+2) `
