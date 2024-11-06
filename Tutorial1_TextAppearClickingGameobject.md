@@ -19,5 +19,33 @@
 
 ![image](https://github.com/user-attachments/assets/2f3bad62-9bad-41aa-8f42-d50217739e14)
 
+## Creating the Text
+1) Back in the hierarchy, right click and navigate to UI > Text - TextMeshPro. Clicking on it will add a new item in the hierarchy - a 'Canvas' folder, and within the folder is our text file.
+   - You may be prompted to install some additional components to make TextMeshPro work. Don't panic, just install what is needed and continue on with the tutorial.
+
+![image](https://github.com/user-attachments/assets/e223860f-b256-4530-8125-4ecc94991203)
+
+2) In the inspector for the TextMeshPro file, you can write whatever you wish in the text input. This will be the text that appears on-screen when the script is succesfully executed.
+
+![image](https://github.com/user-attachments/assets/1214a13a-4bb0-4629-8dc9-557db4561fb7)
+
+3) You may notice that when you created the TextMeshPro in the hierarchy, it created a brand-new, giant screen in the scene editor. When it is zoomed out fully, this new box is actually another representation of the game screen when it is being played, but specifically for allowing you to see where exactly the gameobjects in the 'Canvas' folder (essentially, your UI!) will be in the final game. Try moving your text placement around the screen and putting it in different places once the tutorial is finished to get a proper understanding of this!
+
+![image](https://github.com/user-attachments/assets/3fed549c-e93a-4737-b88e-642a1d6cc8a3)
+
+![image](https://github.com/user-attachments/assets/7e0226da-f5df-4c1a-8a0d-bd2940c625c2)
+
+As you can see, in the first image where we are still editing the scene, you can barely see the square sprite as we are zoomed out to see the canvas editor. But when we go to live, the square is back at its normal size and position, and the text is accurate to where we put it on the canvas editor.
+
+4) Navigate back to the inspector for the text, and locate the check box right underneath the inspector. You will want to uncheck it - this will mark the text as 'inactive', and therefore invisible on the screen. In our script, we will be making it 'active' - visible - when we click on the gameobject.
+
+![image](https://github.com/user-attachments/assets/692ecd1e-ca55-458e-bdf4-f5cab117cdb3)
+
+
 ## Creating the Scripts
-1) 
+1) Back in the project window, right-click and navigate to Create > C# Script. This script will make it so that when we click our left mouse button on the gameobject, it will make the TextMeshPro become active again, turning it visible on our game screen.
+
+![image](https://github.com/user-attachments/assets/f7b48d8b-185a-4ee9-9110-91a3964db27f)
+
+
+2) 
