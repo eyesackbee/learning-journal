@@ -95,3 +95,18 @@ private void OnMouseDown
 So in this case, getting the order correct (matching the ordervalue with the platevalue) would win you the game via a message in the debug log. In my actual prototype, I could probably just add some text on screen that says 'correct' or something similar, and then repeat the game or take you back to the main menu.
 
 This, in theory, would be the method I would use to create my prototype. My main concerns with it right now is the issue of messing around with the cloned sprites to get them to all be visible without overlapping each other, and the general issue of how inexperience I am with coding. I will try to follow the tutorial I found and see how the results go.
+
+Following the tutorial, I hit a snag in terms of how I was going to display the ingredients on the plate. In the 3D tutorial, the models were stacked on top of each other neatly in the same position using gravity, but working with 2D I couldn't do this. If I stacked the sprites on top of each other, only the top one would be visible, and it is important to be able to see every ingredient you have selected.
+I decided it would probably be better for clarity if instead I could stack the sprites on top of each other somehow, showing the position of the ingredient in the burger while not blocking the others. Paul gave me this code:
+
+```c#
+static float offset= 0;
+
+private void OnMouseDown
+{
+  Transform clone = Instantiate(transform);
+  clone.localScale = Vector3.one * 0.5f
+  clone.localPosition = new Vector3(4, 3 + offset, - offset);
+  offset += 0.1f;
+}
+```
