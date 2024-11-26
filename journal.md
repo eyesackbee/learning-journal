@@ -48,3 +48,18 @@ In the final game obviously this code won't be perfect, as I will need to also m
 Writing my first tutorial today, referencing all the things I wrote in here yesterday to remind myself how to do it. Couldn't figure out how to add another md file to this repository without making a new one, so I cheated and downloaded one of Paul's files, reuploaded it and just replaced all of his text with my own. I will be quite embarassed if there is an easier way.
 
 Turns out there was an easier way. When adding a new file to a repository, I just have to put '.md' at the end of the name. 
+
+# 2024-11-26
+
+Starting work on next tutorials and trying to come up with a way to prototype my game. I am struggling to find tutorials for the kind of game I wanted to make (food prep game similar to Papa's Pizzeria), with the few tutorials I have found being very complicated and in 3D rather than 2D.
+
+I found a main menu tutorial that I'll be following later - https://www.youtube.com/watch?v=DX7HyN7oJjE
+
+I found a food prep style tutorial, and while it is for 3D I might be able to use it for my own prototype - https://www.youtube.com/watch?v=WGGAckunBcQ
+
+I was wondering just what exactly I wanted to do in my food prep game, whether it would be more of a simple point-and-click or a Cooking Mama style game. Realistically I don't think I have the skills to do something as complex as the latter, so I will probably use the tutorial as a reference to do a game where you try and match a plate of ingredients to a customer's specification. I think it could be interesting if in the prototype the customer was capable of asking for a randomised plate each time, but we will have to see what I can do with my limited knowledge.
+
+I created basic art assets for burger ingredients and imported them into Unity. Looking at the tutorial, it seems that this prototype will boil down into around 4 or so simple scripts.
+1) A script that designates what the order we will be replicating is -> gameflow
+2) A script that checks the final order when we are done making it to make sure it matches what was requested and win or lose the game -> platecheck
+3) A script that duplicates the sprites of the ingredients to make the 'order' visible on the plate -> clickplace
