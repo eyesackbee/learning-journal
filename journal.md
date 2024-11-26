@@ -59,7 +59,18 @@ I found a food prep style tutorial, and while it is for 3D I might be able to us
 
 I was wondering just what exactly I wanted to do in my food prep game, whether it would be more of a simple point-and-click or a Cooking Mama style game. Realistically I don't think I have the skills to do something as complex as the latter, so I will probably use the tutorial as a reference to do a game where you try and match a plate of ingredients to a customer's specification. I think it could be interesting if in the prototype the customer was capable of asking for a randomised plate each time, but we will have to see what I can do with my limited knowledge.
 
-I created basic art assets for burger ingredients and imported them into Unity. Looking at the tutorial, it seems that this prototype will boil down into around 4 or so simple scripts.
+I created basic art assets for burger ingredients and imported them into Unity. Looking at the tutorial, it seems that this prototype will boil down into around 3 or so scripts.
 1) A script that designates what the order we will be replicating is -> gameflow
 2) A script that checks the final order when we are done making it to make sure it matches what was requested and win or lose the game -> platecheck
 3) A script that duplicates the sprites of the ingredients to make the 'order' visible on the plate -> clickplace
+
+The tutorial had a mechanic for 'cooking' the meat, but I decided not to bother with that for this. The way their method went about this was to have the 'gameflow' script list a public integer 'ordervalue', in which each number unit corresponded to an ingredient. Such as:
+'12101'
+The first and last numbers are tied to the buns - one on the bottom and one on top. The 1000th number, '2', is the amount of meat patties. The 100th number, '1', is the amount of bacon, and the 10th is cheese, which would mean we would have 1 unit of bacon and no cheese on this example burger. 
+
+We would then have another integer named 'platevalue', which would start at '00000'. We want it to be so when we click on the ingredient and get it added to the plate, the corresponding number in the platevalue goes up to match the amount of the ingredient on the plate; the amount of times we click on it. In our gameflow script we would only need to assign the integer for the final order, and then the integer for the plate value at the start. We could make the integers public, so we could adjust the order inside Unity for testing purposes to see if it works. If I were to try and make it to be a randomised order each time for replay value, it would be harder and I'm not really sure how I would go about doing that by myself, as I would probably need to set parameters so that we don't get a crazy amount of things on an order, like 7 bottom buns and 9 patties.
+
+For the next step, I would need to make the script so that when we click on the ingredient sprites it will add the correct numbers to our plate value. I would need to add 2D colliders on every sprite so that void OnMouseDown would interact with the game object properly. We also want this script to duplicate the ingredient sprite and place it on the plate sprite, though since this is 2D I will probably not have the sprites layer over each other perfectly for clarity. We will be adding another public integer which is 'foodvalue', and then in the editor we can manually assign each ingredient how much value they add. We would then want to do platevalue += foodvalue, so that the plate value will update according to the food value that is put on it and can be checked against the order value at the end.
+
+To get it so that clicking on the game object adds the value, what we would do is have a big bracket for the OnMouseDown and then have several 'if' statements for each of the ingredient game objects. We would refer to each one by name, ergo:
+
