@@ -74,3 +74,8 @@ For the next step, I would need to make the script so that when we click on the 
 
 To get it so that clicking on the game object adds the value, what we would do is have a big bracket for the OnMouseDown and then have several 'if' statements for each of the ingredient game objects. We would refer to each one by name, ergo:
 
+```c#
+if (gameObject.name== "Bun"
+```
+
+and then have it place a duplicate sprite over the plate sprite. 
