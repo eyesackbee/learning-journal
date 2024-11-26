@@ -75,7 +75,23 @@ For the next step, I would need to make the script so that when we click on the 
 To get it so that clicking on the game object adds the value, what we would do is have a big bracket for the OnMouseDown and then have several 'if' statements for each of the ingredient game objects. We would refer to each one by name, ergo:
 
 ```c#
-if (gameObject.name== "Bun"
+if (gameObject.name== "Bun")
 ```
 
-and then have it place a duplicate sprite over the plate sprite. 
+and then have it place a duplicate sprite over the plate sprite. This would involve having to fiddle around with vectors which I am not looking forward to, but as long as it works I guess?
+
+The final script would be the platecheck. Like the ingredients, we would attach a 2D collider to the plate sprite, so that when we are ready to serve the order and check if it meets the order value we just have to click on the plate. Then it would be another OnMouseDown and an if statement to check if the plate value matches the order value;
+
+```c#
+private void OnMouseDown
+{
+  if (gameflow.orderValue==gameflow.plateValue)
+    {
+        Debug.Log("correct");
+    }
+}
+```
+
+So in this case, getting the order correct (matching the ordervalue with the platevalue) would win you the game via a message in the debug log. In my actual prototype, I could probably just add some text on screen that says 'correct' or something similar, and then repeat the game or take you back to the main menu.
+
+This, in theory, would be the method I would use to create my prototype. My main concerns with it right now is the issue of messing around with the cloned sprites to get them to all be visible without overlapping each other, and the general issue of how inexperience I am with coding. I will try to follow the tutorial I found and see how the results go.
