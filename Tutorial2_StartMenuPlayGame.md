@@ -7,11 +7,12 @@
 ## Creating the Start Menu Scene
 1) In the project window, navigate to the `Assets` tab and right click, navigating to `Create > Scene`. This new scene is the scene in which your start menu will be in, so name it something appropriate like 'MainMenu'
 
-![image](https://github.com/user-attachments/assets/a07769f9-24c5-4af5-b48e-d43326fb1664)
+![image](https://github.com/user-attachments/assets/8cede149-d9a6-4910-9ef8-728750eb7a94)
 
-2) Click and drag the sprite onto the scene. You will see it appear in the hierarchy if this is done correctly.
+2) Enter the scene and navigate to the hierarchy. Right click and navigate to `UI > Button - TextMeshPro`, which will create the button in your scene.
+  - In the inspector, we can play around with the colour, font, position and so on for the button. For now, just make it so the text on the button is something like 'play'. 
 
-![image](https://github.com/user-attachments/assets/b3ce2c85-8bc0-479b-9fa1-7ac2f75fb8d0)
+![image](https://github.com/user-attachments/assets/d230fe83-7014-4154-915a-a401afbb88b2)
 
 3) Clicking on the sprite gameobject in the hierarchy, go to the inspector and navigate to the `add component` button. Add a `Box Collider 2D` to the gameobject.
    - We want to do this as we need the game to know when we are clicking on the gameobject specifically vs anywhere in general on the screen. We only want the text to appear when we click on the gameobject, not anywhere else, so this collider is necessary.
