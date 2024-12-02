@@ -144,6 +144,6 @@ Now we have the code for it, we go back to the button itself in the hierarchy. I
 
 I believe I am able to write my tutorial on this now, so I will move onto another one. I am going to choose doing a 'quit' button next, as the tutorial I am using for reference already has one and it will be a useful thing to know to make my prototype.
 
-Since I am using the same tutorial video for the quit game as start game, they seem to use the same script but just with the addition of the function to quit the game added. They add a new public function called QuitGame, and shut down the game with the Application.Quit command. It is actually less lines of code than I anticipated and seems very simple. The challenge will be writing the tutorial but referencing the start game tutorial as something that must be read first.
+Since I am using the same tutorial video for the quit game as start game, they seem to use the same script but just with the addition of the function to quit the game added. They add a new public function called QuitGame, and shut down the game with the Application.Quit command. It is actually less lines of code than I anticipated and seems very simple. The challenge will be writing the tutorial but avoid having to reference the start game tutorial as something that must be read first. 
 
-Application.Quit is ignored in the game editor, so I am going to have to quickly export a build of my game to test it.
+Application.Quit is ignored in the game editor, so I am going to have to quickly export a build of my game to test it. Finished both tutorials, now I need to pick a topic for the last one while also juggle the prototype!
