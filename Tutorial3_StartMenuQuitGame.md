@@ -11,6 +11,7 @@
 2) Enter the scene and navigate to the hierarchy. Right click and navigate to `UI > Button - TextMeshPro`, which will create the button in your scene.
   - In the inspector, we can play around with the colour, font, position and so on for the button. For now, just make it so the text on the button is something like 'quit'. 
 
+![image](https://github.com/user-attachments/assets/34b54efa-84c6-46f6-82ac-832f79aed1be)
 
 
 ## Creating the Script
@@ -44,6 +45,4 @@ This means so that when we press the button, it will call the `QuitGame` functio
 ## The Script in Action
 In the Unity editor, `Application.Quit` is specifically ignored when testing a game. In order to see if you have followed the tutorial correctly, you will need to export a build of your game. This can be done by navigating to `File > Build and Run`, and creating a folder within your project that will house the application and all relevant files. Once the build has been exported, you can open the game application, and `Application.Quit` will finally work.
 
-If you have followed these steps correctly, your script should perform like so;
-
-https://github.com/user-attachments/assets/f3b8f361-7e70-400a-940c-1988a11d6617
+![image](https://github.com/user-attachments/assets/38ce3b30-c11e-47cc-ba6f-f0088f0b8a58)
