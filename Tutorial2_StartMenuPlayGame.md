@@ -50,7 +50,7 @@ SceneManager.LoadSceneAsync(1);
 
 ## Attaching the Script
 
-1) Going back to Unity, navigate to the play button itself in your hierarchy. In the inspector, there is a window where we can dictate what happens when the button is pressed; we want to drag and drog the `Main Camera` into the 'object' window, and from there we can go into the 'function' menu and attach the `PlayGame` from the `MainMenu` script that we attached to the camera.
+1) Going back to Unity, navigate to the play button itself in your hierarchy. In the inspector, there is a window where we can dictate what happens when the button is pressed. Click on the plus icon to add a function, and keep it to `Runtime Only`. We now want to drag and drop the `Main Camera` into the 'object' window, and from there we can go into the 'function' menu and attach the `PlayGame` from the `MainMenu` script that we attached to the camera.
 
 ![image](https://github.com/user-attachments/assets/c91e8f59-d786-4c6c-9a42-77a1b230e277) ![image](https://github.com/user-attachments/assets/68978f2f-da57-4f08-9ac2-0966f4d1067b)
 
