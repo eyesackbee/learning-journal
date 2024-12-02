@@ -146,3 +146,4 @@ I believe I am able to write my tutorial on this now, so I will move onto anothe
 
 Since I am using the same tutorial video for the quit game as start game, they seem to use the same script but just with the addition of the function to quit the game added. They add a new public function called QuitGame, and shut down the game with the Application.Quit command. It is actually less lines of code than I anticipated and seems very simple. The challenge will be writing the tutorial but referencing the start game tutorial as something that must be read first.
 
+Application.Quit is ignored in the game editor, so I am going to have to quickly export a build of my game to test it.
