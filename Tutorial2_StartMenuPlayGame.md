@@ -1,8 +1,8 @@
 # Creating a Button to Start Game
 ## This tutorial shows how to create a button that will load the first scene of your game, aimed for use as part of the start menu.
-
-- Image of your sprite
-  - All you need for this tutorial is the image of whatever sprite you will need to click on for the text to appear. This can be anything from a picture of a simple box, to a fully rendered character sprite. For this tutorial we will be using a simple solid coloured square made in MS Paint.
+### Prerequisites
+- Another Scene
+  - In order to complete this tutorial, you need a different scene to the one the start menu will be in. This can be a placeholder, the first level of your game, anything. You just need to have a scene that will be loaded when the button is pressed.
 
 ## Creating the Gameobject
 1) Import your sprite image into Unity by going into the `project window` and navigating to the `Assets folder`. Right click inside this folder and select `Import New Asset`.
