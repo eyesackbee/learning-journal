@@ -2,10 +2,10 @@
 ## This tutorial shows how to create a button that will load the first scene of your game, aimed for use as part of the start menu.
 ### Prerequisites
 - Another Scene
-  - In order to complete this tutorial, you need a different scene to the one the start menu will be in. This can be a placeholder, the first level of your game, anything. You just need to have a scene that will be loaded when the button is pressed.
+  - In order to complete this tutorial, you need a different scene to the one the start menu will be in. This can be a placeholder, the first level of your game, anything. You just need to have a different scene to the one your button will be in, so it can be loaded when the button is pressed.
 
-## Creating the Gameobject
-1) Import your sprite image into Unity by going into the `project window` and navigating to the `Assets folder`. Right click inside this folder and select `Import New Asset`.
+## Creating the Start Menu Scene
+1) In the project window, navigate to the `Assets` tab and right click, navigating to `Create > Scene`. This new scene is the scene in which your start menu will be in, so name it something appropriate like 'MainMenu'
 
 ![image](https://github.com/user-attachments/assets/a07769f9-24c5-4af5-b48e-d43326fb1664)
 
