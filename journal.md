@@ -110,3 +110,36 @@ private void OnMouseDown
   offset += 0.1f;
 }
 ```
+
+# 2024-12-02
+
+Today I am going to focus on doing some more tutorials. I am resuming the start menu.
+
+I am using my project file that has the text appearing in it, so I already have a scene for the start menu to go to once you click play. The first step is to create a new game object, specifically UI > Button text mesh pro. After fiddling with the aesthetics of the button to your liking, then we go to the main camera in the hierachy and make a script to attach to it. This script will be called 'MainMenu'.
+
+The tutorial deletes start and update, and adds 'scene management' to the script at the top.
+
+```c#
+using UnityEngine.SceneManagement;
+```
+
+After looking up this function, it seems that scene management is needed when you are switching between scenes. As we are going from a main menu scene to the scene where I did the text appearing when a sprite is pressed, we naturally need this to be added. 
+
+```c#
+public class MainMenu : MonoBehaviour
+{
+   public void PlayGame()
+    {
+        SceneManager.LoadSceneAsync("Text Appear");
+    }
+
+}
+```
+
+This is the code the tutorial gives for making the button start the next scene. We want it so that when 'PlayGame' runs, it will load the next scene we want, whether that be level 1 of our game or so forth. In this case it is the level of the previous tutorial I have done, "Text Appear".
+
+Now we have the code for it, we go back to the button itself in the hierarchy. If we scroll in the editor we can find a little section that lets us control what the button will do when we click it, and we manually drag the main camera from the hierarchy into the object slot. When we do, in the function tab to the top right, we can manually go through and select a function that is referenced in the main camera, and we just have to select 'PlayGame'. This makes it so that pressing the button will run 'PlayGame', and as we have indicated we want the scene to change to "Text Appear" when this runs, that is what happens.
+
+![image](https://github.com/user-attachments/assets/92403fd9-e2d9-4fae-816e-bc2af26226a7)
+
+I believe I am able to write my tutorial on this now, so I will move onto another one. I am going to choose doing a 'quit' button next, as the tutorial I am using for reference already has one and it will be a useful thing to know to make my prototype.
