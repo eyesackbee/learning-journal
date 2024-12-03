@@ -187,3 +187,6 @@ I actually decided to utilise what I learnt in my tutorials for making a start a
 
 I just have to figure out how to get it so that the button will delete all cloned objects (ie the ingredients on the plate) while leaving the originals alone. I'm going to ask for help because I don't understand documentation enough to solve this on my own.
 
+The method I was shown was to go back to the serveplate script and make a list of
+
+Made a list of transforms in serveplate, each time an ingreidient is added it lso adds to the list. When plate is cleared, goes through eat itme in the listba and detsroys it, then clears the list and clears the plate value. 
