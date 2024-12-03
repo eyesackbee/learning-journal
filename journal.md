@@ -176,3 +176,14 @@ The game works, though I would like it if perhaps the order value could be rando
 
 The tutorial series I was following for the prototype had another video on multiple orders, but each order wasn't randomised and still had a set number to them; https://www.youtube.com/watch?v=15_JV9TenP4
 
+I actually decided to utilise what I learnt in my tutorials for making a start and quit button. I created a button, created a blank gameobject to attach a new script 'clearplate' to, and then attached the gameobject to the button, so when the button is pressed, the function 'ClearPlate' is executed. I used a debug log to test if the button works, and it did!
+
+```c#
+ public void ClearPlate()
+ {
+     Debug.Log("it works");
+ }
+```
+
+I just have to figure out how to get it so that the button will delete all cloned objects (ie the ingredients on the plate) while leaving the originals alone. I'm going to ask for help because I don't understand documentation enough to solve this on my own.
+
