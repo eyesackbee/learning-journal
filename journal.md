@@ -187,6 +187,23 @@ I actually decided to utilise what I learnt in my tutorials for making a start a
 
 I just have to figure out how to get it so that the button will delete all cloned objects (ie the ingredients on the plate) while leaving the originals alone. I'm going to ask for help because I don't understand documentation enough to solve this on my own.
 
-The method I was shown was to go back to the serveplate script and make a list of
+```c#
+List<Transform> food = new List<Transform>();
 
-Made a list of transforms in serveplate, each time an ingreidient is added it lso adds to the list. When plate is cleared, goes through eat itme in the listba and detsroys it, then clears the list and clears the plate value. 
+public void AddFood(Transform item)
+{
+    food.Add(item);
+}
+
+public void ClearPlate()
+{
+    foreach(Transform item in food)
+    {
+        Destroy(item.gameObject);
+    }
+    food.Clear();
+    gameflow.plateValue = 0;
+}
+```
+
+The method I was shown was to go back to the serveplate script and make a list that would add the cloned gameobjects to it as they are generated; each time an ingredient is added, the gameobject is added to the list. When the plate is cleared (the ClearPlate function is called via the button), the serveplate script goes through each item in the list, which should be all the cloned objects, and deletes them through Destroy(item.gameObject). The list itself and the plate value is then cleared, so that we can stack ingredients again and try to match the order value.
