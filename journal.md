@@ -147,3 +147,30 @@ I believe I am able to write my tutorial on this now, so I will move onto anothe
 Since I am using the same tutorial video for the quit game as start game, they seem to use the same script but just with the addition of the function to quit the game added. They add a new public function called QuitGame, and shut down the game with the Application.Quit command. It is actually less lines of code than I anticipated and seems very simple. The challenge will be writing the tutorial but avoid having to reference the start game tutorial as something that must be read first. 
 
 Application.Quit is ignored in the game editor, so I am going to have to quickly export a build of my game to test it. Finished both tutorials, now I need to pick a topic for the last one while also juggle the prototype!
+
+# 2024-12-03
+
+Today I am continuing work on my prototype. I am focusing on giving all the ingredients 'food value' and making it so that the game recognises when you have done the correct order. In our clickplace script which is attached to all ingredient game objects, we can assign them all a set 'food value', and then the number will be different depending on what number unit the ingredient corresponds with. For this prototype, the order value is '121121', and each number correlates to the bottom bun, meat, cheese, lettuce, onion, and top bun respectively. So I went through and assigned each ingredient the value that matches their place in the units. Ie, the bottom bun is worth '100000' in food value, and lettuce is worth '100', and the top bun is worth '1'.
+
+We want to make it so that when we serve the meal, the game checks if the plate value is equal to the order value; if what is served is what has been asked for. The tutorial makes a new script for this called serveplate and attaches it to the plate gameobject. 
+
+```c#
+ private void OnMouseDown()
+ {
+     if (gameflow.orderValue==gameflow.plateValue)
+     {
+         Debug.Log("correct");
+     }
+ }
+```
+
+Then I go back to the clickplace script and add some code so that when the food value increases, it will increase the plate value too.
+
+```c#
+gameflow.plateValue += foodValue;
+```
+
+After testing it, the game works! I put in a small command to send a message to the console if the order value matches the plate value at the end, and when the order is done correctly it is displayed. I an 'else' statement so that if the value is incorrect, it will show a different debug command like 'wrong'.
+
+The game works, though I would like it if perhaps the order value could be randomised each time around for replayability, having customers want different orders. I would need to make it that some values won't be changed though, such as a single bun for top and bottom, and some constraints so that it won't require 9 patties and 9 slices of cheese. I would also like it if some ingredients won't be asked for, like no cheese or onion. I also need to have it displayed somewhere what exactly the order *is* that needs to be created, and some kind of button where we can remove ingredients if we put in a wrong one or to scrap the burger altogether and start fresh. I will need to ask for help with this as I wouldn't know how to do any of this.
+
