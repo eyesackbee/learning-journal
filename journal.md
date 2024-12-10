@@ -232,4 +232,4 @@ Another issue is that when I replay the game after winning or losing, the sprite
 
 To try and solve the issue of the plate and ordervalue not resetting, I included a 'start' function to the gameflow so it would always run at the start of the scene. But this returned an error so I decided to scrap that.\
 
-reset food value in both win lose case, made it so we can replay with correct values. reset offset value to stop sprites stacking when replaying. not figured out intermittent bug yet
+reset food value in both win lose case, made it so we can replay with correct values. reset offset value to stop sprites stacking when replaying. not figured out intermittent bug yet with bun layering issue
