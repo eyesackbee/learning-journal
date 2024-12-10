@@ -207,3 +207,10 @@ public void ClearPlate()
 ```
 
 The method I was shown was to go back to the serveplate script and make a list that would add the cloned gameobjects to it as they are generated; each time an ingredient is added, the gameobject is added to the list. When the plate is cleared (the ClearPlate function is called via the button), the serveplate script goes through each item in the list, which should be all the cloned objects, and deletes them through Destroy(item.gameObject). The list itself and the plate value is then cleared, so that we can stack ingredients again and try to match the order value.
+
+# 2024-12-10
+
+Today I am going to try and polish my prototype since I believe it is functionally complete. I want to add in a start/quit menu and have win/lose screens show up when you win or lose the game. These should be pretty easy to implement as I have already done a tutorial for the start menu and it probably will be similar to just change the scenes to a win or lose scene.
+
+To start I just made 3 new scenes - one for the start menu and then two for the win and lose screens. I then followed my tutorial for the start screen that I made and got it to work as intended.
+
