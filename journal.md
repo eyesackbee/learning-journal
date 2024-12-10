@@ -212,5 +212,20 @@ The method I was shown was to go back to the serveplate script and make a list t
 
 Today I am going to try and polish my prototype since I believe it is functionally complete. I want to add in a start/quit menu and have win/lose screens show up when you win or lose the game. These should be pretty easy to implement as I have already done a tutorial for the start menu and it probably will be similar to just change the scenes to a win or lose scene.
 
-To start I just made 3 new scenes - one for the start menu and then two for the win and lose screens. I then followed my tutorial for the start screen that I made and got it to work as intended.
+To start I just made 3 new scenes - one for the start menu and then two for the win and lose screens. I then followed my tutorial for the start screen that I made and got it to work as intended. Using the code I referenced to make the game change scenes and quit worked in my test build, so now I can move on to making the win and lose screens. I wanted to also add a button to quit the game or try again from these screens, so I followed the tutorials again and just duplicated the same code and made sure the buttons were redirecting to the correct screens.
 
+After I reused the code for quitting and starting the game scene again, I went back to the serveplate script and changed the debug code to instead take us to the win screen.
+
+```c#
+ if (gameflow.orderValue==gameflow.plateValue)
+ {
+     SceneManager.LoadSceneAsync("WinScreen");
+ }
+```
+
+After a test to see if this worked, I just have to create the lose screen and basically reuse the code to make us do the same things, but instead reuse the application quit code. I then realised, however, that I didn't actually need to make a new script- I can just reuse the old one, as the button commands are the same thing. This saves a bit of time as I don't have to copy and paste any code.
+
+I then just copy the same scene changing code into the serveplate script so that 'losing' the game sends you to the lose screen instead of the win screen, and both our menus work.
+
+I ran into some bugs. Firstly, when you click on the bottom bun for the first time, the sprite for it doesn't show up, but its value is still added to foodvalue. I suspect this means that the image itself is somehow being put underneath the plate sprite in the hierarchy, but I'm not sure.
+Another issue is that when I replay the game after winning or losing, the sprites for the food keep stacking higher and higher despite being loaded into a fresh scene of the game. I think I'd have to include some kind of code to make it so that the position of the sprites get reset with each new scene but I don't know how I would do this. 
