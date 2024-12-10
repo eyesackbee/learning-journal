@@ -228,4 +228,8 @@ After a test to see if this worked, I just have to create the lose screen and ba
 I then just copy the same scene changing code into the serveplate script so that 'losing' the game sends you to the lose screen instead of the win screen, and both our menus work.
 
 I ran into some bugs. Firstly, when you click on the bottom bun for the first time, the sprite for it doesn't show up, but its value is still added to foodvalue. I suspect this means that the image itself is somehow being put underneath the plate sprite in the hierarchy, but I'm not sure.
-Another issue is that when I replay the game after winning or losing, the sprites for the food keep stacking higher and higher despite being loaded into a fresh scene of the game. I think I'd have to include some kind of code to make it so that the position of the sprites get reset with each new scene but I don't know how I would do this. 
+Another issue is that when I replay the game after winning or losing, the sprites for the food keep stacking higher and higher despite being loaded into a fresh scene of the game. Replaying the game after a win also doesn't reset the platevalue, and you can instantly win the game again by not putting anything on the plate but will lose if you make the order correctly again. I think I'd have to include some kind of code to make it so that the position of the sprites get reset with each new scene but I don't know how I would do this. 
+
+To try and solve the issue of the plate and ordervalue not resetting, I included a 'start' function to the gameflow so it would always run at the start of the scene. But this returned an error so I decided to scrap that.\
+
+reset food value in both win lose case, made it so we can replay with correct values. reset offset value to stop sprites stacking when replaying. not figured out intermittent bug yet
