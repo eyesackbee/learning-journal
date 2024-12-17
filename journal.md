@@ -233,3 +233,9 @@ Another issue is that when I replay the game after winning or losing, the sprite
 To try and solve the issue of the plate and ordervalue not resetting, I included a 'start' function to the gameflow so it would always run at the start of the scene. But this returned an error so I decided to scrap that.\
 
 reset food value in both win lose case, made it so we can replay with correct values. reset offset value to stop sprites stacking when replaying. not figured out intermittent bug yet with bun layering issue
+
+# 2024-12-17
+
+Since the prototype is roughly finished, I am going to make my last tutorial today. I was going to make one based on something I put in the game, but looking over the code I can't really pick something out that wouldn't require a lot of prerequisities. So I think I will just do something simple, like how to make a button function. I briefly touched upon buttons in my start menu and quit tutorials, but I didn't really explain in-depth about how the functions work. It would be easy to do and also reinforce the knowledge I learned in those tutorials.
+
+For the tutorial I will probably just have the button make an image appear, since I already did a tutorial to make text appear. I can reuse old code for this tutorial with some changes- 
