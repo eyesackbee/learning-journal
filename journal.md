@@ -239,3 +239,20 @@ reset food value in both win lose case, made it so we can replay with correct va
 Since the prototype is roughly finished, I am going to make my last tutorial today. I was going to make one based on something I put in the game, but looking over the code I can't really pick something out that wouldn't require a lot of prerequisities. So I think I will just do something simple, like how to make a button function. I briefly touched upon buttons in my start menu and quit tutorials, but I didn't really explain in-depth about how the functions work. It would be easy to do and also reinforce the knowledge I learned in those tutorials.
 
 For the tutorial I will probably just have the button make an image appear, since I already did a tutorial to make text appear. I can reuse old code for this tutorial with some changes- 
+
+```c#
+public GameObject target;
+public void ShowImage()
+
+{
+    target.SetActive(true);
+}
+```
+
+The target will be the image I want to appear, and like in my first tutorial I will have to uncheck the visibility box in the editor to make it so it is not visible when the scene is started. I create the function 'ShowImage' as all buttons need to have a function attached, so they know what it is to do when it is pressed. Inside the curly brackets underneath, that is where we put in the code of the function, and this simply makes it so that it checks the box on the test image so it becomes visible.
+
+I drag the image onto the scene and uncheck the box, and then just create the button. I made the script and attached it to the main camera, and inside the editor I drag the image gameobject that I want to make appear on-screen in the 'target' box. 
+
+![image](https://github.com/user-attachments/assets/8cc5e435-9236-4f7f-9d0e-828575877c81)
+
+When I tested the scene it all worked perfectly on the first try, which I am quite happy with. Though the code is very similar to old code, it is a different enough function that I feel I used the knowledge I had already learned to piece together something new. It is quite simple but I think it is enough for the final tutorial.
