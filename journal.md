@@ -230,9 +230,11 @@ I then just copy the same scene changing code into the serveplate script so that
 I ran into some bugs. Firstly, when you click on the bottom bun for the first time, the sprite for it doesn't show up, but its value is still added to foodvalue. I suspect this means that the image itself is somehow being put underneath the plate sprite in the hierarchy, but I'm not sure.
 Another issue is that when I replay the game after winning or losing, the sprites for the food keep stacking higher and higher despite being loaded into a fresh scene of the game. Replaying the game after a win also doesn't reset the platevalue, and you can instantly win the game again by not putting anything on the plate but will lose if you make the order correctly again. I think I'd have to include some kind of code to make it so that the position of the sprites get reset with each new scene but I don't know how I would do this. 
 
-To try and solve the issue of the plate and ordervalue not resetting, I included a 'start' function to the gameflow so it would always run at the start of the scene. But this returned an error so I decided to scrap that.\
+To try and solve the issue of the plate and ordervalue not resetting, I included a 'start' function to the gameflow so it would always run at the start of the scene. But this returned an error so I decided to scrap that.
 
-reset food value in both win lose case, made it so we can replay with correct values. reset offset value to stop sprites stacking when replaying. not figured out intermittent bug yet with bun layering issue
+In the end I went back into the serveplate script and manually added code to reset the plate value back to 0 each time, regardless of a win or a lose. This makes it so when you replay, no matter if you previously got
+the order correct or not you can try again from scratch and the plate values from the previous games get reset each time to ensure the count is accurate. For the issue with having the sprites continue stacking up and
+up, I went back into the clickplace script and added in a reset offset value that activates each time the game is reloaded. 
 
 # 2024-12-17
 
@@ -256,3 +258,15 @@ I drag the image onto the scene and uncheck the box, and then just create the bu
 ![image](https://github.com/user-attachments/assets/8cc5e435-9236-4f7f-9d0e-828575877c81)
 
 When I tested the scene it all worked perfectly on the first try, which I am quite happy with. Though the code is very similar to old code, it is a different enough function that I feel I used the knowledge I had already learned to piece together something new. It is quite simple but I think it is enough for the final tutorial.
+
+With the last tutorial written, I think it is time to try and tackle the bug that appears in the prototype. With a bit of further testing, I have discovered that the bug isn't solely confined to the bottom bun sprite- regardless of what sprite I click on first, each of them has a chance of having the sprite not show up on the screen, but still add to the plate value. 
+
+I also discovered that the offset wasn't reset when clicking to clear the plate. I can probably just copy the code from serveplate and put it on that script so it also works for that function too. 
+
+I managed to fix the bug by changing the position of the plate sprite in the Z axis- both the plate and the first object put on the plate were assigned as 0 in the Z axis, which made it so sometimes it simply wouldn't show up. As sprites get stacked in the negatives, by assigning the plate the 1 position, it would always be behind the food.
+
+I copy pasted the reset function from the clickplace script into the serveplate script too, underneath the function for clearing the plate, so that it would be called whenever you clear the plate.
+
+![image](https://github.com/user-attachments/assets/15281b09-ccb6-4aae-a8e7-d450f1a325d4)
+![image](https://github.com/user-attachments/assets/56bdbfde-602d-444f-a016-5438b1695f82)
+
